@@ -158,4 +158,5 @@ cython_debug/
 # Other
 *.lnk
 *.ui
+icon.ico
 back_logo.png

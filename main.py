@@ -17,6 +17,9 @@ with client:
     file_list = []
     ext = [".jpg", ".jpeg", ".png", ".bmp"]
 
+    if not os.path.isdir(f"{os.getcwd()}/{os.getenv("DST")}"):
+        os.mkdir(f"{os.getcwd()}/{os.getenv("DST")}")
+
     for file in os.listdir(f"{os.getcwd()}/{os.getenv("DST")}"):
         if file.lower().endswith(tuple(ext)) and '~$' not in file:
             file_list.append(file)
