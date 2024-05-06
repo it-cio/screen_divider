@@ -1,16 +1,15 @@
 import os
-import sys
 import random
+import sys
 
 import yadisk
+from PyQt5 import QtWidgets, QtCore, QtGui
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QPalette, QColor
+from PyQt5.QtWidgets import QDesktopWidget
 from dotenv import load_dotenv
 
 import gui
-
-from PyQt5 import QtCore, QtWidgets, QtGui
-from PyQt5.QtWidgets import QDesktopWidget
-from PyQt5.QtGui import QPalette, QColor
-from PyQt5.QtCore import Qt
 
 load_dotenv()
 client = yadisk.Client(token=os.getenv("TOKEN"))
